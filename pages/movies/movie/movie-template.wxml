@@ -1,0 +1,8 @@
+<import src="/pages/movies/stars/stars-template.wxml" />
+<template name="movietemplate">
+    <view class="movie-container" data-movie-id="{{movieId}}" catchtap="onMovieTap">
+        <image class="movie-img" src="{{coverageUrl}}"></image>
+        <text class="movie-title">{{title}}</text>
+        <template is="startemplate" data="{{stars:stars, score:average}}" />
+    </view>
+</template>
